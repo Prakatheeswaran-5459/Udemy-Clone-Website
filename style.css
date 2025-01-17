@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+.navbar{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    align-items: center;
+    gap: 20px;
+}  
+
+.navbr__left__title{
+    color: #A435F0;
+}
+.navbar__search{
+    padding: 10px;
+    border: 1px solid black;
+    width: 60%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbr__search__input{
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+}
+
+.navbar__right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.hamburger{
+    display: none;
+}
+
+.catagories{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.catagories__name{
+    background-color: #A435F0;
+    padding: 10px;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid #A435F0;
+}
+
+.catagories__name:hover{
+    background-color: white;
+    color: #A435F0;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.sale-image img{
+    width: 100%;
+}
+
+.recomended{
+    padding: 10px;
+}
+
+.recomended-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+.course-card{
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
+}
+.course-card img{
+    width: 100%;
+    height: 50%;
+}
+
+.topics{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.recomended-topics{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.recomended-topics p{
+    border: 1px solid black;
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 25%;
+} 
+
+
+.footer{
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer-body{
+    display: flex;
+    flex-basis: 25%;
+    padding: 30px;
+    column-gap: 30px;
+}
+
+.footer-1 p{
+    margin: 20px;
+}
+.footer-2 p{
+    margin: 20px;
+}
+
+.foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.sale-image-offer{
+    position: absolute;
+    width: 35%;
+    padding: 2%;
+    top: 40%;
+    left: 10%;
+    background-color: white;
+    padding: 10px;
+    border: 2px solid black;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.hover-container {
+    position: relative; 
+    display: inline-block;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tooltip-box {
+    visibility: hidden;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 150%; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    
+}
+
+.hover-container:hover .tooltip-box {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+@media screen and (max-width:800px) {
+    body{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .course-card{
+        flex-basis: 40%;
+    }
+    .catagories{
+        display: none;
+    }
+  .navbar__search,.navbar__right{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .sale-image-offer{
+        display: none;
+    }
+}
+
